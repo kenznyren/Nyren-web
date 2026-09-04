@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Nyren_Official.id</title>
 
     <style>
@@ -11,6 +12,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -23,21 +28,27 @@
             );
 
             min-height: 100vh;
+            padding: 16px;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            padding: 16px;
+            color: #3d1f4a;
         }
+
+        /* =========================
+           CARD UTAMA
+        ========================= */
 
         .card {
             max-width: 440px;
             width: 100%;
 
-            background: rgba(255, 248, 250, 0.85);
+            background: rgba(255, 248, 250, 0.86);
 
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
 
             border-radius: 36px;
 
@@ -50,19 +61,30 @@
                 0 8px 30px rgba(233, 30, 99, 0.08);
         }
 
-
         /* =========================
-           HALAMAN UTAMA
+           HALAMAN
         ========================= */
 
-        .main-page {
-            display: block;
-        }
-
-        .main-page.hidden {
+        .page {
             display: none;
         }
 
+        .page.active {
+            display: block;
+            animation: pageIn 0.35s ease;
+        }
+
+        @keyframes pageIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* =========================
            CAROUSEL
@@ -76,6 +98,7 @@
             background: rgba(255, 255, 255, 0.6);
 
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
 
             margin-bottom: 22px;
 
@@ -90,8 +113,7 @@
         .carousel-track {
             display: flex;
 
-            transition:
-                transform 0.5s ease;
+            transition: transform 0.5s ease;
         }
 
         .carousel-slide {
@@ -108,11 +130,9 @@
             color: #4a2c5a;
 
             font-weight: 600;
-
             font-size: 15px;
 
             display: flex;
-
             align-items: center;
 
             gap: 12px;
@@ -120,6 +140,7 @@
 
         .emoji-big {
             font-size: 28px;
+            flex-shrink: 0;
         }
 
         .promo-text {
@@ -138,7 +159,6 @@
             border-radius: 30px;
 
             font-size: 11px;
-
             font-weight: 700;
 
             color: #fff;
@@ -152,7 +172,6 @@
 
         .carousel-dots {
             display: flex;
-
             justify-content: center;
 
             gap: 8px;
@@ -162,7 +181,6 @@
 
         .carousel-dots span {
             width: 8px;
-
             height: 8px;
 
             border-radius: 10px;
@@ -184,14 +202,12 @@
             width: 22px;
         }
 
-
         /* =========================
            FOTO PROFIL
         ========================= */
 
         .avatar {
             width: 92px;
-
             height: 92px;
 
             border-radius: 50%;
@@ -200,8 +216,7 @@
 
             overflow: hidden;
 
-            border:
-                3px solid rgba(255, 255, 255, 0.7);
+            border: 3px solid rgba(255, 255, 255, 0.75);
 
             box-shadow:
                 0 4px 25px rgba(156, 39, 176, 0.25);
@@ -211,14 +226,12 @@
 
         .avatar img {
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
 
             display: block;
         }
-
 
         /* =========================
            IDENTITAS
@@ -244,7 +257,6 @@
             margin-top: 2px;
         }
 
-
         /* =========================
            YOUTUBE BADGE
         ========================= */
@@ -256,10 +268,10 @@
 
             margin: 8px auto 20px;
 
-            background:
-                rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.5);
 
             backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
 
             padding: 4px 18px;
 
@@ -267,8 +279,7 @@
 
             font-size: 12px;
 
-            border:
-                1px solid rgba(206, 147, 216, 0.2);
+            border: 1px solid rgba(206, 147, 216, 0.2);
 
             box-shadow:
                 0 2px 12px rgba(156, 39, 176, 0.06);
@@ -286,9 +297,8 @@
             text-decoration: underline;
         }
 
-
         /* =========================
-           LINK BUTTONS
+           LINK BUTTON
         ========================= */
 
         .link-grid {
@@ -302,13 +312,14 @@
         }
 
         .link-btn {
-            background:
-                rgba(255, 255, 255, 0.55);
+            width: 100%;
+
+            background: rgba(255, 255, 255, 0.55);
 
             backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
 
-            border:
-                1px solid rgba(206, 147, 216, 0.2);
+            border: 1px solid rgba(206, 147, 216, 0.2);
 
             border-radius: 60px;
 
@@ -334,11 +345,12 @@
                 0 2px 12px rgba(156, 39, 176, 0.06);
 
             cursor: pointer;
+
+            -webkit-tap-highlight-color: transparent;
         }
 
         .link-btn:hover {
-            background:
-                rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.8);
 
             border-color: #9c27b0;
 
@@ -348,42 +360,40 @@
                 0 8px 25px rgba(156, 39, 176, 0.15);
         }
 
+        .link-btn:active {
+            transform: scale(0.98);
+        }
+
         .left {
             display: flex;
 
             align-items: center;
+
+            min-width: 0;
         }
 
         .icon {
             font-size: 20px;
 
             margin-right: 12px;
+
+            flex-shrink: 0;
         }
 
         .arrow {
             color: #9c27b0;
 
             font-size: 20px;
-        }
 
+            margin-left: 10px;
+        }
 
         /* =========================
            WHATSAPP
         ========================= */
 
-        .wa-protect {
-            user-select: none;
-
-            -webkit-user-select: none;
-
-            -moz-user-select: none;
-
-            -ms-user-select: none;
-        }
-
         .wa-price {
-            background:
-                rgba(76, 175, 80, 0.15);
+            background: rgba(76, 175, 80, 0.15);
 
             padding: 2px 12px;
 
@@ -394,8 +404,9 @@
             color: #2e7d32;
 
             margin-left: 6px;
-        }
 
+            white-space: nowrap;
+        }
 
         /* =========================
            FOOTER
@@ -410,8 +421,7 @@
 
             font-size: 13px;
 
-            border-top:
-                1px solid rgba(206, 147, 216, 0.15);
+            border-top: 1px solid rgba(206, 147, 216, 0.15);
 
             padding-top: 20px;
 
@@ -424,41 +434,9 @@
             color: #7a4d8a;
         }
 
-
         /* =========================
-           CHANNEL UPDATE PAGE
+           HALAMAN CHANNEL UPDATE
         ========================= */
-
-        .update-page {
-            display: none;
-
-            animation:
-                fadeIn 0.35s ease;
-        }
-
-        .update-page.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-
-            from {
-                opacity: 0;
-
-                transform:
-                    translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-            }
-        }
-
-
-        /* HEADER UPDATE */
 
         .update-header {
             display: flex;
@@ -467,132 +445,181 @@
 
             gap: 12px;
 
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .back-btn {
-            width: 42px;
-
-            height: 42px;
-
             border: none;
+
+            background: rgba(255, 255, 255, 0.65);
+
+            width: 44px;
+            height: 44px;
 
             border-radius: 50%;
 
-            background:
-                rgba(255, 255, 255, 0.65);
+            font-size: 23px;
 
-            border:
-                1px solid rgba(206, 147, 216, 0.25);
-
-            color: #3d1f4a;
-
-            font-size: 20px;
+            color: #7b1fa2;
 
             cursor: pointer;
 
-            transition: 0.3s;
+            box-shadow:
+                0 3px 12px rgba(156, 39, 176, 0.08);
+
+            transition: 0.25s;
+
+            -webkit-tap-highlight-color: transparent;
         }
 
         .back-btn:hover {
-            transform:
-                translateX(-3px);
+            transform: translateX(-3px);
 
-            background:
-                rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.9);
         }
 
         .update-title {
-            color: #3d1f4a;
-
-            font-size: 23px;
+            font-size: 25px;
 
             font-weight: 700;
+
+            color: #3d1f4a;
         }
 
         .update-subtitle {
-            color: #7a4d8a;
+            color: #8c6799;
 
             font-size: 13px;
 
             margin-top: 2px;
         }
 
+        /* =========================
+           UPDATE CARD
+        ========================= */
 
-        /* VIDEO */
+        .update-card {
+            background: rgba(255, 255, 255, 0.62);
 
-        .youtube-box {
-            overflow: hidden;
+            border: 1px solid rgba(206, 147, 216, 0.22);
 
-            border-radius: 22px;
+            border-radius: 24px;
 
-            background:
-                rgba(255, 255, 255, 0.55);
+            padding: 18px;
 
-            border:
-                1px solid rgba(206, 147, 216, 0.25);
+            margin-bottom: 14px;
 
             box-shadow:
-                0 5px 25px rgba(156, 39, 176, 0.10);
+                0 5px 20px rgba(156, 39, 176, 0.07);
         }
 
-        .youtube-box iframe {
-            width: 100%;
+        .update-top {
+            display: flex;
 
-            aspect-ratio: 16 / 9;
+            align-items: center;
 
-            border: 0;
+            justify-content: space-between;
 
-            display: block;
+            gap: 10px;
+
+            margin-bottom: 10px;
         }
 
-        .update-info {
-            text-align: center;
-
-            margin-top: 16px;
-
-            color: #7a4d8a;
-
-            font-size: 13px;
-
-            line-height: 1.5;
-        }
-
-        .channel-btn {
-            display: block;
-
-            text-align: center;
-
-            margin-top: 14px;
-
-            padding: 13px 18px;
-
-            border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #9c27b0,
-                    #e91e63
-                );
+        .update-badge {
+            background: linear-gradient(
+                135deg,
+                #9c27b0,
+                #e91e63
+            );
 
             color: white;
 
+            padding: 4px 11px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+        .update-date {
+            color: #9a7aaa;
+
+            font-size: 11px;
+        }
+
+        .update-card h3 {
+            color: #4a2c5a;
+
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+        .update-card p {
+            color: #76577f;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        .watch-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 13px;
+
+            padding: 9px 15px;
+
+            border-radius: 30px;
+
+            background: rgba(233, 30, 99, 0.1);
+
+            color: #ad1457;
+
             text-decoration: none;
+
+            font-size: 13px;
 
             font-weight: 600;
 
-            box-shadow:
-                0 5px 20px rgba(156, 39, 176, 0.20);
-
-            transition: 0.3s;
+            transition: 0.25s;
         }
 
-        .channel-btn:hover {
-            transform:
-                translateY(-2px);
+        .watch-btn:hover {
+            background: rgba(233, 30, 99, 0.18);
+
+            transform: translateY(-1px);
         }
 
+        /* =========================
+           INFO OTOMATIS
+        ========================= */
+
+        .auto-info {
+            text-align: center;
+
+            background: rgba(156, 39, 176, 0.07);
+
+            border: 1px solid rgba(156, 39, 176, 0.1);
+
+            padding: 13px 15px;
+
+            border-radius: 18px;
+
+            margin-top: 18px;
+
+            color: #795488;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
 
         /* =========================
            RESPONSIVE
@@ -600,51 +627,58 @@
 
         @media (max-width: 420px) {
 
+            body {
+                padding: 10px;
+            }
+
             .card {
-                padding:
-                    16px 14px 28px;
+                padding: 16px 14px 28px;
+
+                border-radius: 30px;
             }
 
             .carousel-slide {
                 font-size: 14px;
 
-                padding:
-                    14px 12px;
+                padding: 14px 12px;
             }
 
             .promo-label {
-                padding:
-                    3px 10px;
+                padding: 3px 10px;
+            }
+
+            .name {
+                font-size: 25px;
+            }
+
+            .link-btn {
+                padding: 15px 17px;
+
+                font-size: 15px;
+            }
+
+            .update-title {
+                font-size: 23px;
             }
         }
-
     </style>
 </head>
-
 
 <body>
 
 <div class="card">
 
-
-    <!-- ==================================================
+    <!-- =====================================================
          HALAMAN UTAMA
-    ================================================== -->
+    ====================================================== -->
 
-    <div
-        class="main-page"
-        id="mainPage"
-    >
+    <section id="homePage" class="page active">
 
-
-        <!-- CAROUSEL PROMO -->
+        <!-- CAROUSEL -->
 
         <div class="carousel-wrap">
 
-            <div
-                class="carousel-track"
-                id="carouselTrack"
-            >
+            <div class="carousel-track" id="carouselTrack">
 
                 <div class="carousel-slide">
 
@@ -745,7 +779,7 @@
         </div>
 
 
-        <!-- YOUTUBE BADGE -->
+        <!-- YOUTUBE -->
 
         <div class="badge-yt">
 
@@ -762,7 +796,7 @@
         </div>
 
 
-        <!-- LINK GRID -->
+        <!-- BUTTON -->
 
         <div class="link-grid">
 
@@ -795,10 +829,10 @@
 
             <!-- CHANNEL UPDATE -->
 
-            <a
-                href="#"
+            <button
+                type="button"
                 class="link-btn"
-                onclick="showUpdatePage(); return false;"
+                id="openUpdates"
             >
 
                 <span class="left">
@@ -815,7 +849,7 @@
                     →
                 </span>
 
-            </a>
+            </button>
 
 
             <!-- WHATSAPP -->
@@ -824,7 +858,7 @@
                 href="https://wa.me/6281260532027?text=bang,+mau+beli+am+Prem+10k+setahun"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="link-btn wa-protect"
+                class="link-btn"
             >
 
                 <span class="left">
@@ -868,31 +902,27 @@
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          HALAMAN CHANNEL UPDATE
-    ================================================== -->
+    ====================================================== -->
 
-    <div
-        class="update-page"
-        id="updatePage"
-    >
-
+    <section id="updatesPage" class="page">
 
         <!-- HEADER -->
 
         <div class="update-header">
 
             <button
+                type="button"
                 class="back-btn"
-                onclick="showMainPage()"
+                id="backHome"
                 aria-label="Kembali"
             >
                 ←
             </button>
-
 
             <div>
 
@@ -901,7 +931,7 @@
                 </div>
 
                 <div class="update-subtitle">
-                    Upload terbaru Nyren Official
+                    Update terbaru dari Nyren
                 </div>
 
             </div>
@@ -909,42 +939,121 @@
         </div>
 
 
-        <!-- YOUTUBE VIDEO -->
+        <!-- UPDATE 1 -->
 
-        <div class="youtube-box">
+        <article class="update-card">
 
-            <iframe
-                src="https://www.youtube.com/embed?listType=user_uploads&list=nyren_official"
-                title="Nyren Official - Upload Terbaru"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <div class="update-top">
 
-        </div>
+                <span class="update-badge">
+                    VIDEO BARU
+                </span>
+
+                <span class="update-date">
+                    Terbaru
+                </span>
+
+            </div>
+
+            <h3>
+                🎬 Video terbaru Nyren
+            </h3>
+
+            <p>
+                Cek video terbaru di channel YouTube
+                Nyren_Official dan jangan lupa support
+                dengan like dan subscribe!
+            </p>
+
+            <a
+                class="watch-btn"
+                href="https://youtube.com/@nyren_official"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ▶️ Lihat Channel
+            </a>
+
+        </article>
+
+
+        <!-- UPDATE 2 -->
+
+        <article class="update-card">
+
+            <div class="update-top">
+
+                <span class="update-badge">
+                    INFO
+                </span>
+
+                <span class="update-date">
+                    Nyren
+                </span>
+
+            </div>
+
+            <h3>
+                🌸 Update Channel
+            </h3>
+
+            <p>
+                Semua informasi mengenai upload,
+                konten baru, dan aktivitas channel
+                Nyren akan ditampilkan di halaman ini.
+            </p>
+
+        </article>
+
+
+        <!-- UPDATE 3 -->
+
+        <article class="update-card">
+
+            <div class="update-top">
+
+                <span class="update-badge">
+                    SUPPORT
+                </span>
+
+                <span class="update-date">
+                    2026
+                </span>
+
+            </div>
+
+            <h3>
+                💜 Terima kasih sudah support!
+            </h3>
+
+            <p>
+                Terima kasih sudah mampir ke website
+                Nyren_Official. Jangan lupa subscribe
+                channel YouTube Nyren.
+            </p>
+
+            <a
+                class="watch-btn"
+                href="https://youtube.com/@nyren_official"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                📺 YouTube Nyren
+            </a>
+
+        </article>
 
 
         <!-- INFO -->
 
-        <div class="update-info">
+        <div class="auto-info">
 
-            🔄 Upload terbaru akan mengikuti
-            channel YouTube Nyren.
+            🔄 <b>Channel Update</b><br>
+
+            Halaman ini bisa kamu ubah kapan saja
+            untuk menambahkan informasi atau video terbaru.
 
         </div>
-
-
-        <!-- OPEN CHANNEL -->
-
-        <a
-            href="https://youtube.com/@nyren_official"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="channel-btn"
-        >
-
-            ▶️ Buka Channel YouTube
-
-        </a>
 
 
         <!-- FOOTER -->
@@ -961,25 +1070,23 @@
 
         </div>
 
-    </div>
+    </section>
 
 </div>
 
 
-<!-- ==================================================
+<!-- =========================================================
      JAVASCRIPT
-================================================== -->
+========================================================= -->
 
 <script>
 
-    /* =========================
+    /* =====================================================
        CAROUSEL
-    ========================= */
+    ====================================================== */
 
     const track =
-        document.getElementById(
-            "carouselTrack"
-        );
+        document.getElementById("carouselTrack");
 
     const dots =
         document.querySelectorAll(
@@ -988,8 +1095,7 @@
 
     let current = 0;
 
-    const total =
-        dots.length;
+    const total = dots.length;
 
 
     function goTo(index) {
@@ -1008,11 +1114,11 @@
         track.style.transform =
             "translateX(-" +
             (current * 100) +
-            "%)";
+            "%";
 
 
         dots.forEach(
-            function (dot, i) {
+            function(dot, i) {
 
                 dot.classList.toggle(
                     "active",
@@ -1021,16 +1127,15 @@
 
             }
         );
-
     }
 
 
     dots.forEach(
-        function (dot) {
+        function(dot) {
 
             dot.addEventListener(
                 "click",
-                function () {
+                function() {
 
                     const index =
                         Number(
@@ -1046,51 +1151,130 @@
     );
 
 
-    let interval =
+    let carouselInterval =
         setInterval(
-            function () {
+            function() {
 
-                goTo(
-                    current + 1
-                );
+                goTo(current + 1);
 
             },
             5000
         );
 
 
-    const carousel =
+    const carouselWrap =
         document.querySelector(
             ".carousel-wrap"
         );
 
 
-    carousel.addEventListener(
+    carouselWrap.addEventListener(
         "mouseenter",
-        function () {
+        function() {
 
             clearInterval(
-                interval
+                carouselInterval
             );
 
         }
     );
 
 
-    carousel.addEventListener(
+    carouselWrap.addEventListener(
         "mouseleave",
-        function () {
+        function() {
 
-            interval =
+            carouselInterval =
                 setInterval(
-                    function () {
+                    function() {
 
-                        goTo(
-                            current + 1
-                        );
+                        goTo(current + 1);
 
                     },
                     5000
                 );
 
-    
+        }
+    );
+
+
+    goTo(0);
+
+
+    /* =====================================================
+       HALAMAN CHANNEL UPDATE
+    ====================================================== */
+
+    const homePage =
+        document.getElementById(
+            "homePage"
+        );
+
+
+    const updatesPage =
+        document.getElementById(
+            "updatesPage"
+        );
+
+
+    const openUpdates =
+        document.getElementById(
+            "openUpdates"
+        );
+
+
+    const backHome =
+        document.getElementById(
+            "backHome"
+        );
+
+
+    /* BUKA CHANNEL UPDATE */
+
+    openUpdates.addEventListener(
+        "click",
+        function() {
+
+            homePage.classList.remove(
+                "active"
+            );
+
+            updatesPage.classList.add(
+                "active"
+            );
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+
+    /* KEMBALI KE HOME */
+
+    backHome.addEventListener(
+        "click",
+        function() {
+
+            updatesPage.classList.remove(
+                "active"
+            );
+
+            homePage.classList.add(
+                "active"
+            );
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+</script>
+
+</body>
+</html>   
