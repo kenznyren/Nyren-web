@@ -21,57 +21,100 @@
                 #e8e0f0 60%,
                 #fce4ec 100%
             );
+
             min-height: 100vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             padding: 16px;
         }
 
         .card {
             max-width: 440px;
             width: 100%;
+
             background: rgba(255, 248, 250, 0.85);
+
             backdrop-filter: blur(12px);
+
             border-radius: 36px;
+
             padding: 24px 20px 34px;
+
             border: 1px solid rgba(206, 147, 216, 0.3);
+
             box-shadow:
                 0 20px 60px rgba(156, 39, 176, 0.15),
                 0 8px 30px rgba(233, 30, 99, 0.08);
         }
 
-        /* CAROUSEL */
+
+        /* =========================
+           HALAMAN UTAMA
+        ========================= */
+
+        .main-page {
+            display: block;
+        }
+
+        .main-page.hidden {
+            display: none;
+        }
+
+
+        /* =========================
+           CAROUSEL
+        ========================= */
 
         .carousel-wrap {
             overflow: hidden;
+
             border-radius: 20px;
+
             background: rgba(255, 255, 255, 0.6);
+
             backdrop-filter: blur(8px);
+
             margin-bottom: 22px;
+
             border: 1px solid rgba(206, 147, 216, 0.25);
+
             position: relative;
-            box-shadow: 0 4px 20px rgba(156, 39, 176, 0.08);
+
+            box-shadow:
+                0 4px 20px rgba(156, 39, 176, 0.08);
         }
 
         .carousel-track {
             display: flex;
-            transition: transform 0.5s ease;
+
+            transition:
+                transform 0.5s ease;
         }
 
         .carousel-slide {
             min-width: 100%;
+
             padding: 18px 16px;
+
             background: linear-gradient(
                 135deg,
                 rgba(243, 229, 245, 0.7),
                 rgba(252, 228, 236, 0.5)
             );
+
             color: #4a2c5a;
+
             font-weight: 600;
+
             font-size: 15px;
+
             display: flex;
+
             align-items: center;
+
             gap: 12px;
         }
 
@@ -89,29 +132,45 @@
                 #9c27b0,
                 #e91e63
             );
+
             padding: 3px 14px;
+
             border-radius: 30px;
+
             font-size: 11px;
+
             font-weight: 700;
+
             color: #fff;
+
             text-transform: uppercase;
+
             letter-spacing: 0.5px;
+
             white-space: nowrap;
         }
 
         .carousel-dots {
             display: flex;
+
             justify-content: center;
+
             gap: 8px;
+
             padding: 10px 0 6px;
         }
 
         .carousel-dots span {
             width: 8px;
+
             height: 8px;
+
             border-radius: 10px;
+
             background: #d1b3d9;
+
             transition: 0.3s;
+
             cursor: pointer;
         }
 
@@ -121,65 +180,105 @@
                 #9c27b0,
                 #e91e63
             );
+
             width: 22px;
         }
 
-        /* FOTO PROFIL */
+
+        /* =========================
+           FOTO PROFIL
+        ========================= */
 
         .avatar {
             width: 92px;
+
             height: 92px;
+
             border-radius: 50%;
+
             margin: 0 auto 12px;
+
             overflow: hidden;
-            border: 3px solid rgba(255, 255, 255, 0.7);
+
+            border:
+                3px solid rgba(255, 255, 255, 0.7);
+
             box-shadow:
                 0 4px 25px rgba(156, 39, 176, 0.25);
+
             background: #f3e5f5;
         }
 
         .avatar img {
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
             display: block;
         }
 
-        /* IDENTITAS */
+
+        /* =========================
+           IDENTITAS
+        ========================= */
 
         .name {
             text-align: center;
+
             font-size: 26px;
+
             font-weight: 700;
+
             color: #3d1f4a;
         }
 
         .handle {
             text-align: center;
+
             color: #7a4d8a;
+
             font-size: 15px;
+
             margin-top: 2px;
         }
 
-        /* YOUTUBE */
+
+        /* =========================
+           YOUTUBE BADGE
+        ========================= */
 
         .badge-yt {
             display: block;
+
             width: fit-content;
+
             margin: 8px auto 20px;
-            background: rgba(255, 255, 255, 0.5);
+
+            background:
+                rgba(255, 255, 255, 0.5);
+
             backdrop-filter: blur(4px);
+
             padding: 4px 18px;
+
             border-radius: 40px;
+
             font-size: 12px;
-            border: 1px solid rgba(206, 147, 216, 0.2);
+
+            border:
+                1px solid rgba(206, 147, 216, 0.2);
+
             box-shadow:
                 0 2px 12px rgba(156, 39, 176, 0.06);
         }
 
         .badge-yt a {
             color: #c62828;
+
             text-decoration: none;
+
             font-weight: 600;
         }
 
@@ -187,294 +286,700 @@
             text-decoration: underline;
         }
 
-        /* LINK BUTTONS */
+
+        /* =========================
+           LINK BUTTONS
+        ========================= */
 
         .link-grid {
             display: flex;
+
             flex-direction: column;
+
             gap: 12px;
+
             margin-top: 6px;
         }
 
         .link-btn {
-            background: rgba(255, 255, 255, 0.55);
+            background:
+                rgba(255, 255, 255, 0.55);
+
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(206, 147, 216, 0.2);
+
+            border:
+                1px solid rgba(206, 147, 216, 0.2);
+
             border-radius: 60px;
+
             padding: 16px 20px;
+
             color: #3d1f4a;
+
             text-decoration: none;
+
             font-weight: 500;
+
             font-size: 16px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             transition: all 0.3s ease;
+
             box-shadow:
                 0 2px 12px rgba(156, 39, 176, 0.06);
+
+            cursor: pointer;
         }
 
         .link-btn:hover {
-            background: rgba(255, 255, 255, 0.8);
+            background:
+                rgba(255, 255, 255, 0.8);
+
             border-color: #9c27b0;
+
             transform: translateY(-2px);
+
             box-shadow:
                 0 8px 25px rgba(156, 39, 176, 0.15);
         }
 
         .left {
             display: flex;
+
             align-items: center;
         }
 
         .icon {
             font-size: 20px;
+
             margin-right: 12px;
         }
 
         .arrow {
             color: #9c27b0;
+
             font-size: 20px;
         }
 
-        /* WHATSAPP */
+
+        /* =========================
+           WHATSAPP
+        ========================= */
 
         .wa-protect {
             user-select: none;
+
             -webkit-user-select: none;
+
             -moz-user-select: none;
+
             -ms-user-select: none;
         }
 
         .wa-price {
-            background: rgba(76, 175, 80, 0.15);
+            background:
+                rgba(76, 175, 80, 0.15);
+
             padding: 2px 12px;
+
             border-radius: 40px;
+
             font-size: 13px;
+
             color: #2e7d32;
+
             margin-left: 6px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         .footer-note {
             margin-top: 28px;
+
             text-align: center;
+
             color: #9a7aaa;
+
             font-size: 13px;
-            border-top: 1px solid rgba(206, 147, 216, 0.15);
+
+            border-top:
+                1px solid rgba(206, 147, 216, 0.15);
+
             padding-top: 20px;
+
             letter-spacing: 0.4px;
         }
 
         .domain {
             font-weight: 600;
+
             color: #7a4d8a;
         }
 
-        /* RESPONSIVE */
+
+        /* =========================
+           CHANNEL UPDATE PAGE
+        ========================= */
+
+        .update-page {
+            display: none;
+
+            animation:
+                fadeIn 0.35s ease;
+        }
+
+        .update-page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* HEADER UPDATE */
+
+        .update-header {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 18px;
+        }
+
+        .back-btn {
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.65);
+
+            border:
+                1px solid rgba(206, 147, 216, 0.25);
+
+            color: #3d1f4a;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform:
+                translateX(-3px);
+
+            background:
+                rgba(255, 255, 255, 0.9);
+        }
+
+        .update-title {
+            color: #3d1f4a;
+
+            font-size: 23px;
+
+            font-weight: 700;
+        }
+
+        .update-subtitle {
+            color: #7a4d8a;
+
+            font-size: 13px;
+
+            margin-top: 2px;
+        }
+
+
+        /* VIDEO */
+
+        .youtube-box {
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255, 255, 255, 0.55);
+
+            border:
+                1px solid rgba(206, 147, 216, 0.25);
+
+            box-shadow:
+                0 5px 25px rgba(156, 39, 176, 0.10);
+        }
+
+        .youtube-box iframe {
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            border: 0;
+
+            display: block;
+        }
+
+        .update-info {
+            text-align: center;
+
+            margin-top: 16px;
+
+            color: #7a4d8a;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+        .channel-btn {
+            display: block;
+
+            text-align: center;
+
+            margin-top: 14px;
+
+            padding: 13px 18px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #9c27b0,
+                    #e91e63
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 5px 20px rgba(156, 39, 176, 0.20);
+
+            transition: 0.3s;
+        }
+
+        .channel-btn:hover {
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 420px) {
+
             .card {
-                padding: 16px 14px 28px;
+                padding:
+                    16px 14px 28px;
             }
 
             .carousel-slide {
                 font-size: 14px;
-                padding: 14px 12px;
+
+                padding:
+                    14px 12px;
             }
 
             .promo-label {
-                padding: 3px 10px;
+                padding:
+                    3px 10px;
             }
         }
+
     </style>
 </head>
+
 
 <body>
 
 <div class="card">
 
-    <!-- CAROUSEL PROMO -->
 
-    <div class="carousel-wrap">
+    <!-- ==================================================
+         HALAMAN UTAMA
+    ================================================== -->
 
-        <div class="carousel-track" id="carouselTrack">
+    <div
+        class="main-page"
+        id="mainPage"
+    >
 
-            <div class="carousel-slide">
-                <span class="emoji-big">🌅</span>
 
-                <span class="promo-text">
-                    ✨ AM Prem 10k/tahun – edit pro tanpa batas!
-                </span>
+        <!-- CAROUSEL PROMO -->
 
-                <span class="promo-label">
-                    Promo
-                </span>
+        <div class="carousel-wrap">
+
+            <div
+                class="carousel-track"
+                id="carouselTrack"
+            >
+
+                <div class="carousel-slide">
+
+                    <span class="emoji-big">
+                        🌅
+                    </span>
+
+                    <span class="promo-text">
+                        ✨ AM Prem 10k/tahun – edit pro tanpa batas!
+                    </span>
+
+                    <span class="promo-label">
+                        Promo
+                    </span>
+
+                </div>
+
+
+                <div class="carousel-slide">
+
+                    <span class="emoji-big">
+                        🌸
+                    </span>
+
+                    <span class="promo-text">
+                        Alight Motion Premium – semua efek eksklusif
+                    </span>
+
+                    <span class="promo-label">
+                        Hot
+                    </span>
+
+                </div>
+
+
+                <div class="carousel-slide">
+
+                    <span class="emoji-big">
+                        🎁
+                    </span>
+
+                    <span class="promo-text">
+                        Beli AM Prem + bonus pack asset gratis
+                    </span>
+
+                    <span class="promo-label">
+                        Bonus
+                    </span>
+
+                </div>
+
             </div>
 
-            <div class="carousel-slide">
-                <span class="emoji-big">🌸</span>
 
-                <span class="promo-text">
-                    Alight Motion Premium – semua efek eksklusif
-                </span>
+            <div
+                class="carousel-dots"
+                id="carouselDots"
+            >
 
-                <span class="promo-label">
-                    Hot
-                </span>
-            </div>
+                <span
+                    class="active"
+                    data-index="0"
+                ></span>
 
-            <div class="carousel-slide">
-                <span class="emoji-big">🎁</span>
+                <span
+                    data-index="1"
+                ></span>
 
-                <span class="promo-text">
-                    Beli AM Prem + bonus pack asset gratis
-                </span>
+                <span
+                    data-index="2"
+                ></span>
 
-                <span class="promo-label">
-                    Bonus
-                </span>
             </div>
 
         </div>
 
-        <div class="carousel-dots" id="carouselDots">
-            <span class="active" data-index="0"></span>
-            <span data-index="1"></span>
-            <span data-index="2"></span>
+
+        <!-- FOTO PROFIL -->
+
+        <div class="avatar">
+
+            <img
+                src="nyren-profile.png"
+                alt="Nyren"
+            >
+
         </div>
 
-    </div>
+
+        <!-- IDENTITAS -->
+
+        <div class="name">
+            Nyren
+        </div>
+
+        <div class="handle">
+            @nyren_official
+        </div>
 
 
-    <!-- FOTO PROFIL NYREN -->
+        <!-- YOUTUBE BADGE -->
 
-    <div class="avatar">
-        <img
-            src="nyren-profile.png"
-            alt="Nyren"
-        >
-    </div>
+        <div class="badge-yt">
 
+            ▶️
 
-    <!-- IDENTITAS -->
+            <a
+                href="https://youtube.com/@nyren_official"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                youtube.com/@nyren_official
+            </a>
 
-    <div class="name">
-        Nyren
-    </div>
-
-    <div class="handle">
-        @nyren_official
-    </div>
+        </div>
 
 
-    <!-- YOUTUBE -->
+        <!-- LINK GRID -->
 
-    <div class="badge-yt">
-
-        ▶️
-
-        <a
-            href="https://youtube.com/@nyren_official"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            youtube.com/@nyren_official
-        </a>
-
-    </div>
+        <div class="link-grid">
 
 
-    <!-- LINK -->
+            <!-- YOUTUBE -->
 
-    <div class="link-grid">
+            <a
+                href="https://youtube.com/@nyren_official"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn"
+            >
 
-        <!-- YOUTUBE -->
+                <span class="left">
 
-        <a
-            href="https://youtube.com/@nyren_official"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-btn"
-        >
+                    <span class="icon">
+                        📺
+                    </span>
 
-            <span class="left">
+                    YouTube Channel
 
-                <span class="icon">
-                    📺
                 </span>
 
-                YouTube Channel
-
-            </span>
-
-            <span class="arrow">
-                →
-            </span>
-
-        </a>
-
-
-        <!-- WHATSAPP -->
-
-        <a
-            href="https://wa.me/6281260532027?text=bang,+mau+beli+am+Prem+10k+setahun"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-btn wa-protect"
-        >
-
-            <span class="left">
-
-                <span class="icon">
-                    💬
+                <span class="arrow">
+                    →
                 </span>
 
-                <span>
+            </a>
 
-                    Beli AM Prem
 
-                    <span class="wa-price">
-                        10k/thn
+            <!-- CHANNEL UPDATE -->
+
+            <a
+                href="#"
+                class="link-btn"
+                onclick="showUpdatePage(); return false;"
+            >
+
+                <span class="left">
+
+                    <span class="icon">
+                        🆕
+                    </span>
+
+                    Channel Update
+
+                </span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/6281260532027?text=bang,+mau+beli+am+Prem+10k+setahun"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn wa-protect"
+            >
+
+                <span class="left">
+
+                    <span class="icon">
+                        💬
+                    </span>
+
+                    <span>
+
+                        Beli AM Prem
+
+                        <span class="wa-price">
+                            10k/thn
+                        </span>
+
                     </span>
 
                 </span>
 
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer-note">
+
+            🌸
+
+            <span class="domain">
+                Nyren_Official.id
             </span>
 
-            <span class="arrow">
-                →
-            </span>
+            • 2026
 
-        </a>
+        </div>
 
     </div>
 
 
-    <!-- FOOTER -->
+    <!-- ==================================================
+         HALAMAN CHANNEL UPDATE
+    ================================================== -->
 
-    <div class="footer-note">
+    <div
+        class="update-page"
+        id="updatePage"
+    >
 
-        🌸
 
-        <span class="domain">
-            Nyren_Official.id
-        </span>
+        <!-- HEADER -->
 
-        • 2026
+        <div class="update-header">
+
+            <button
+                class="back-btn"
+                onclick="showMainPage()"
+                aria-label="Kembali"
+            >
+                ←
+            </button>
+
+
+            <div>
+
+                <div class="update-title">
+                    Channel Update
+                </div>
+
+                <div class="update-subtitle">
+                    Upload terbaru Nyren Official
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- YOUTUBE VIDEO -->
+
+        <div class="youtube-box">
+
+            <iframe
+                src="https://www.youtube.com/embed?listType=user_uploads&list=nyren_official"
+                title="Nyren Official - Upload Terbaru"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <!-- INFO -->
+
+        <div class="update-info">
+
+            🔄 Upload terbaru akan mengikuti
+            channel YouTube Nyren.
+
+        </div>
+
+
+        <!-- OPEN CHANNEL -->
+
+        <a
+            href="https://youtube.com/@nyren_official"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="channel-btn"
+        >
+
+            ▶️ Buka Channel YouTube
+
+        </a>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer-note">
+
+            🌸
+
+            <span class="domain">
+                Nyren_Official.id
+            </span>
+
+            • 2026
+
+        </div>
 
     </div>
 
 </div>
 
 
-<!-- CAROUSEL JAVASCRIPT -->
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script>
 
+    /* =========================
+       CAROUSEL
+    ========================= */
+
     const track =
-        document.getElementById("carouselTrack");
+        document.getElementById(
+            "carouselTrack"
+        );
 
     const dots =
         document.querySelectorAll(
@@ -483,12 +988,9 @@
 
     let current = 0;
 
-    const total = dots.length;
+    const total =
+        dots.length;
 
-
-    /**
-     * @param {number} index
-     */
 
     function goTo(index) {
 
@@ -501,6 +1003,7 @@
         }
 
         current = index;
+
 
         track.style.transform =
             "translateX(-" +
@@ -518,6 +1021,7 @@
 
             }
         );
+
     }
 
 
@@ -528,12 +1032,12 @@
                 "click",
                 function () {
 
-                    const idx =
+                    const index =
                         Number(
                             this.dataset.index
                         );
 
-                    goTo(idx);
+                    goTo(index);
 
                 }
             );
@@ -546,30 +1050,34 @@
         setInterval(
             function () {
 
-                goTo(current + 1);
+                goTo(
+                    current + 1
+                );
 
             },
             5000
         );
 
 
-    const wrap =
+    const carousel =
         document.querySelector(
             ".carousel-wrap"
         );
 
 
-    wrap.addEventListener(
+    carousel.addEventListener(
         "mouseenter",
         function () {
 
-            clearInterval(interval);
+            clearInterval(
+                interval
+            );
 
         }
     );
 
 
-    wrap.addEventListener(
+    carousel.addEventListener(
         "mouseleave",
         function () {
 
@@ -577,19 +1085,12 @@
                 setInterval(
                     function () {
 
-                        goTo(current + 1);
+                        goTo(
+                            current + 1
+                        );
 
                     },
                     5000
                 );
 
-        }
-    );
-
-
-    goTo(0);
-
-</script>
-
-</body>
-</html>
+    
